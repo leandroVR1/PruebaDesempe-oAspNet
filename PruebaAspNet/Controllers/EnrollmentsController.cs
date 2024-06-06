@@ -36,6 +36,12 @@ namespace PruebaAspNet.Controllers
             return await PutEnrollmentMethod.PutEnrollment(Id, enrollment, _enrollmentService);
         }
         
+        [HttpGet("date/{date}")]
+        public async Task<IActionResult> GetEnrollmentsByDate(DateTime date)
+        {
+            return await GetEnrollmentsByDateMethod.GetEnrollmentsByDate(date, _enrollmentService);
+        }
+        
     }
     
 }

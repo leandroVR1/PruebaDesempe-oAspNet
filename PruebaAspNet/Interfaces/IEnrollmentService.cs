@@ -12,7 +12,10 @@ namespace PruebaAspNet.Interfaces
         Task<Enrollment> GetEnrollmentById(int Id);
         Task<Enrollment> PostEnrollment(Enrollment enrollment);
         Task<Enrollment> PutEnrollment(int Id, Enrollment enrollment);
-        
+        Task<IEnumerable<Enrollment>> GetEnrollmentsByDate(DateTime date);
+
+
+
 
         
     }

@@ -21,10 +21,12 @@ namespace PruebaAspNet.Data
 
 
          // Configuración de mapeo para el Enum StatusEnum en la tabla enrollments
-             modelBuilder.Entity<Enrollment>()
-                .Property(m => m.Status)
-                .HasConversion<string>();
-            // Configuración de mapeo para el Enum StatusEnum para las tablas
+         modelBuilder.Entity<Enrollment>()
+               .Property(e => e.Status)
+               .HasConversion<string>();
+
+
+        
             
       
 

@@ -70,6 +70,12 @@ namespace PruebaAspNet.Services
         {
             return await _context.enrollments.FirstOrDefaultAsync(e => e.Id == id);
         }
+
+        // Metodo para obtener  lista de matriculas que se realizaron en una fecha en especifico
+        public async Task<IEnumerable<Enrollment>> GetEnrollmentsByDate(DateTime date)
+        {
+            return await _context.enrollments.Where(e => e.Date == date).ToListAsync();
+        }
        
         
        
